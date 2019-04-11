@@ -8,9 +8,12 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./list-coins.component.sass']
 })
 export class ListCoinsComponent implements OnInit {
-coins: any[] = [];
-coins1: any;
-coins2: any;
+coinsBTC: any = [];
+coinsLTC: any;
+coinsBCH: any;
+coinsETH: any;
+coinsXRP: any;
+coinsXMR: any;
 
   constructor(
     private service: CoinService,
@@ -20,27 +23,43 @@ coins2: any;
 
   ngOnInit() {
 
-    this.service.showbitcoin()
-    .subscribe(data => {
-      this.coins = data as any;
-      console.log(this.coins);
-    })
+    this.service.showAllCoins("BTC")
+    .subscribe((data) => {
+      this.coinsBTC = data;
+      console.log(this.coinsBTC);
+    });
 
+    // this.service.showAllCoins("LTC")
+    // .subscribe((data) => {
+    //   this.coinsLTC = data;
+    //   console.log(this.coinsLTC);
+    // });
 
+    // this.service.showAllCoins("BCH")
+    // .subscribe((data) => {
+    //   this.coinsBCH = data;
+    //   console.log(this.coinsBCH);
+    // });
 
-    this.service.showLitecoin()
-    .subscribe(data => {
-    this.coins1 = data as any;
-    console.log(this.coins1);
-  })
+    // this.service.showAllCoins1("ETH")
+    // .subscribe((data) => {
+    //   this.coinsETH = data;
+    //   console.log(this.coinsETH);
+    // });
 
+    // this.service.showAllCoins1("XRP")
+    // .subscribe((data) => {
+    //   this.coinsXRP = data;
+    //   console.log(this.coinsXRP);
+    // });
 
-this.service.showbitCash()
-.subscribe(data => {
-this.coins2 = data as any;
-console.log(this.coins2);
-})
-}
+    // this.service.showAllCoins1("XMR")
+    // .subscribe((data) => {
+    //   this.coinsXMR = data;
+    //   console.log(this.coinsXMR);
+    // });
+  
+  }
 
   
   
