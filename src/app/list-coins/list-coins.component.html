@@ -10,33 +10,44 @@
   <title>Document</title>
 </head>
 <body>
-    <!-- <ul>
-    <li *ngFor="let coin of coins"><p>{{coin['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p></li>
-  </ul>
+  
+    <div routerLink="/coin/{{coinsBTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}" class="coinBlocks">
+     <p>{{coinsBTC['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
+     <p>{{coinsBTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
+   <p>€{{coinsBTC['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
+    </div>
 
-  <p>{{coins['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
-  <p>{{coins['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
-  <p>{{coins['Realtime Currency Exchange Rate']['3. To_Currency Code']}}</p>
-  <p>{{coins['Realtime Currency Exchange Rate']['4.To_Currency Name']}}</p>
-  <p>{{coins['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
-  <p>{{coins['Realtime Currency Exchange Rate']['6. Last Refreshed']}}</p>
-  <p>{{coins['Realtime Currency Exchange Rate']['7. Time Zone']}}</p> -->
 
-<div class="coinBlocks">
-  <p>{{coins1['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
-  <p>{{coins1['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
-  <p>€{{coins1['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
+<!-- <div class="coinBlocks">
+  <p>{{coinsLTC['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
+  <p >{{coinsLTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
+  <p>€{{coinsLTC['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
 </div>
 
 
+<div class="coinBlocks">
+    <p>{{coinsBCH['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
+    <p>{{coinsBCH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
+    <p>€{{coinsBCH['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
+  </div>
 
-  <p>{{coins2['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
-  <p>{{coins2['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
-  <p>{{coins2['Realtime Currency Exchange Rate']['3. To_Currency Code']}}</p>
-  <p>{{coins2['Realtime Currency Exchange Rate']['4.To_Currency Name']}}</p>
-  <p>{{coins2['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
-  <p>{{coins2['Realtime Currency Exchange Rate']['6. Last Refreshed']}}</p>
-  <p>{{coins2['Realtime Currency Exchange Rate']['7. Time Zone']}}</p>
+<div class="coinBlocks">
+    <p>{{coinsETH['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
+    <p>{{coinsETH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
+    <p>€{{coinsETH['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
+  </div>
+
+<div class="coinBlocks">
+    <p>{{coinsXRP['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
+    <p>{{coinsXRP['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
+    <p>€{{coinsXRP['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
+  </div>
   
+
+<div class="coinBlocks">
+    <p>{{coinsXMR['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</p>
+    <p>{{coinsXMR['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</p>
+    <p>€{{coinsXMR['Realtime Currency Exchange Rate']['5. Exchange Rate']}}</p>
+  </div> -->
 </body>
 </html>
