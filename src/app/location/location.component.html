@@ -1,3 +1,28 @@
-<p>
-  location works!
-</p>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Location Example</title>
+</head>
+<body>
+
+  <h1>Something About My Location</h1>
+
+  <!-- Only trigger a geolocation request on user interaction -->
+  <a href='#' id='getLocation'>Find My Location</a>
+
+  <!-- Offer an alternative -->
+  <form action='#'>
+    <label for='manualLocation'>Or, enter your city...</label>
+    <input type='text' id='manualLocation' placeholder=''>
+  </form>
+
+  <!-- Show some information about the location, when known -->
+  <div id='feedback'>Location is not yet known...</div>
+
+  <!-- Lazy JS load -->
+  <script src='./location.js'></script>
+
+</body>
+</html>
