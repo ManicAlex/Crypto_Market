@@ -9,6 +9,12 @@ import { ListCoinsComponent } from './list-coins/list-coins.component';
 import { CoinComponent } from './coin/coin.component';
 import { NewsComponent } from './news/news.component';
 import { BanksComponent } from './banks/banks.component';
+import {MatCardModule} from '@angular/material/card';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +23,18 @@ import { BanksComponent } from './banks/banks.component';
     ListCoinsComponent,
     CoinComponent,
     NewsComponent,
-    BanksComponent
+    BanksComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent
+    ]
 })
 export class AppModule { }
