@@ -8,7 +8,7 @@ import {BanksComponent}         from '../app/banks/banks.component';
 
 
 const routes: Routes = [
-  {path: '',          component: ListCoinsComponent},
+  {path:  "", pathMatch:  "full",redirectTo:  "list-coins"},
   {path: 'list-coins',     component: ListCoinsComponent},
   {path: 'coin/:coin',     component: CoinComponent},
   {path: 'news',     component: NewsComponent},
