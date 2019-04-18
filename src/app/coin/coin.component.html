@@ -1,13 +1,79 @@
-<p>
-  coin works!
-</p>
-<div class='jumbotron'>
+
+<a href="" ng-click="back()">Back</a>
     <div class='container'>
-            <h3>This is my root</h3>
-    <p>Sure look we trying the best we can!!!</p>
-    </div>
+
+        <div class="coinImageDiv">
+            <img class="coinImage" src="../../assets/img/BTC.png">
+        </div>
+
+        <div class="row">
+ 
+      
+          <div>
+            
+            <h4>{{this.stock['Meta Data']['3. Digital Currency Name']}}</h4>
+          </div>
+      
+          <div>
+            <h4>{{this.stock['Meta Data']['2. Digital Currency Code']}}</h4>
+            </div>
+
+          
+        </div>
 
 
+          </div>
+
+
+          <hr>
+  
+
+
+<div class="table-responsive">
+ 
 <div *ngIf="chart">
-    <canvas id="canvas">{{ chart }}</canvas>
+    
+    <canvas id="canvas" style="min-height:350px" class="table">{{ chart }}</canvas>
   </div>
+</div>
+
+<hr>
+  
+
+
+  
+      <div class='container'>
+          <div>
+              <h5>The Current Market Cap:</h5>
+              </div>
+        <div>
+          <h3>{{  this.NewMark | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
+          </div>
+          <div class='row'>
+
+          <div>
+              <h5>Last Volume price:</h5>
+              </div>
+        <div>
+          <h3>{{  this.volume | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
+          </div>
+          </div>
+          <div class='row'>
+
+          <div>
+            <h5>Last Opening price:</h5>
+            </div>
+      <div>
+        <h3>{{  this.open | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
+        </div>
+          </div>
+          <div class='row'>
+        <div>
+          <h5>Last Closing price:</h5>
+          </div>
+    <div>
+      <h3>{{  this.close | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
+      </div>
+      </div>
+            </div>
+            <hr>
