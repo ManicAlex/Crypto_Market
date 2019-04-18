@@ -9,12 +9,13 @@ import { ListCoinsComponent } from './list-coins/list-coins.component';
 import { CoinComponent } from './coin/coin.component';
 import { NewsComponent } from './news/news.component';
 import { BanksComponent } from './banks/banks.component';
-import {MatCardModule} from '@angular/material/card';
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +26,13 @@ import { HeaderComponent } from './header/header.component';
     NewsComponent,
     BanksComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    MatCardModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent
