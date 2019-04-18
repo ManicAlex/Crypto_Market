@@ -6,11 +6,15 @@ import { ChartService } from '../services/chart.service';
 import { map } from 'rxjs/operators';
 import { StockData } from '../stockdata';
 import { HttpClient } from '@angular/common/http';
+import {ListCoinsComponent} from '../list-coins/list-coins.component';
+import { CurrencyPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-coin',
   templateUrl: './coin.component.html',
-  styleUrls: ['./coin.component.scss']
+  styleUrls: ['./coin.component.scss'],
+  providers:[CurrencyPipe]
 })
 export class CoinComponent implements OnInit {
   codesign: any;
@@ -20,6 +24,11 @@ export class CoinComponent implements OnInit {
   high: any = [];
   res1: any;
   data: any = [];
+  mark: any;
+  NewMark: any;
+  open: any;
+  close: any;
+  volume: any;
 
   // stockData: StockData[];
   // url = this.stock;
@@ -31,12 +40,12 @@ export class CoinComponent implements OnInit {
 
 
   constructor(
-    private service:     CoinService,
-    private service1:     ChartService,
-    private service2:     ChartService,
-    private router      : Router,
-    private route       : ActivatedRoute,
-    private http: HttpClient
+    private service      :CoinService,
+    private service1     :ChartService,
+    private router       :Router,
+    private route        :ActivatedRoute,
+    private http         :HttpClient,
+    private pipe         :CurrencyPipe
   ) { }
 
   ngOnInit() {
@@ -55,9 +64,16 @@ export class CoinComponent implements OnInit {
 
       console.log(this.stock['Time Series (Digital Currency Daily)']);
 
-      const allDates      = Object.keys(this.stock['Time Series (Digital Currency Daily)']).slice(0,30);
-      const allLows       = [];
-      const allHighs      = [];
+      const allDates      = Object.keys(this.stock['Time Series (Digital Currency Daily)']).slice(0,7);
+      const Market        = Object.keys(this.stock['Time Series (Digital Currency Daily)']).slice(0,1);
+      const allLows:      any     = [];
+      const allHighs:     any     = [];
+      const allOpens:     any     = [];
+      const allClose:     any     = [];
+      const allVolume:    any     = [];
+      const MarketCap:    any     = [];
+
+
 
 
       allDates.forEach(date => {
@@ -67,20 +83,26 @@ export class CoinComponent implements OnInit {
        allHighs.push(this.stock['Time Series (Digital Currency Daily)'][date]['2a. high (EUR)']);
 
       });
-      console.log(allHighs);
 
 
-      // this.http.get(this.url).subscribe((res: StockData[]) => {
-      //   res.forEach(y => {
-      //     this.stockDate.push(y.stockDate);
-      //     this.price.push(y.price);
-      //   });
+      Market.forEach(date => {
 
+        MarketCap.push(this.stock['Time Series (Digital Currency Daily)'][date]['6. market cap (USD)']);
+        this.NewMark = parseFloat(MarketCap).toFixed(2);
 
+        allOpens.push(this.stock['Time Series (Digital Currency Daily)'][date]['1a. open (EUR)']);
+        this.open = parseFloat(allOpens).toFixed(2);
 
-      // let high = this.stock['Time Series (Digital Currency Daily)'].map(() => this.stock = this.stock["2019-04-11"]['3a. high (EUR)']));
-      // let low = this.stock['Time Series (Digital Currency Daily)'].map(() => this.stock = this.stock.date['3a. low (EUR)']));
-      // let alldates = this.stock['Time Series (Digital Currency Daily)'].map( () => this.stock['2019-04-10']));
+        allClose.push(this.stock['Time Series (Digital Currency Daily)'][date]['4a. close (EUR)']);
+        this.close = parseFloat(allClose).toFixed(2);
+
+        allVolume.push(this.stock['Time Series (Digital Currency Daily)'][date]['5. volume']);
+        this.volume = parseFloat(allVolume).toFixed(2);
+
+      });
+      
+      console.log(this.open);
+      console.log(allLows);
       
 
       this.chart = new Chart('canvas', {
@@ -88,38 +110,76 @@ export class CoinComponent implements OnInit {
         type: 'line',
         
         data: {
+          
           labels: allDates,
+          
           datasets: [
             { 
               data: allLows,
-              borderColor: "#3cba9f",
+              borderColor: "#f51607",
               fill: true,
+              backgroundColor: "#f5160780",
+
               
               label: 'Low'
             },
             { 
               data: allHighs,
-              borderColor: "#ffcc00",
+              borderColor: "#31f018",
               fill: true,
+              backgroundColor: "#31f01880",
               
               label: 'High'
             },
+            
           ]
         },
         options: {
+          responsive: true,
+
           
-          legend: {
-            display: true
+          title: {
+            display: true,
+            fontSize: 17,
+            fontColor: 'white',
+            text: 'Daily High & Low Prices'
+
+          },
+          
+    tooltips: {
+      mode: 'index',
+      intersect: false,
+    },
+   hover: {
+      mode: 'nearest',
+      intersect: true
+    },
+          
+          legend:  {
+            labels: {
+                fontColor: "white",
+                fontSize: 15
+            }
           },
           scales: {
             xAxes: [{
-              display: true
+              display: true,
+              gridLines: { color: "white" },
+              ticks: {
+                fontColor: "white",
+                
+            }
             }
           
           
           ],
             yAxes: [{
-              display: true
+              display: true,
+              gridLines: { color: "grey" },
+              ticks: {
+                fontColor: "white",
+               
+            }
             }],
           }
         }
