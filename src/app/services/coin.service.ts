@@ -12,9 +12,10 @@ export class CoinService {
 
   url = environment.url;
   
+  
 
     showAllCoins(codesign){
-      return this.http.get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign + '&&to_currency=EUR&apikey=ZW1Z54B9AJQ1VM7I');
+      return this.http.get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign + '&&to_currency=EUR&apikey=PXP1YAA08GRJ6YY1');
     }
 
     //Apikey only allows for 5 api calls per min and i have more
@@ -25,7 +26,7 @@ export class CoinService {
 
 
     GetCoinStock(codesign){
-      return this.http.get('https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=' + codesign + '&market=EUR&apikey=1B15XTG6QUNM1V1Y')
+      return this.http.get('https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=' + codesign + '&market=EUR&apikey=ZW1Z54B9AJQ1VM7I')
       ;
     }
 
