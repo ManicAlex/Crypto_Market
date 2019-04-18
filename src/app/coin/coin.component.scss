@@ -1,0 +1,76 @@
+.table {
+    padding: 1rem;
+    margin-bottom: 0rem;
+}
+
+.container{
+    padding: none;
+}
+
+.row {
+    display: flex;    
+    margin-left: .1rem;
+    margin-right: .1rem;
+    text-align: center;
+    justify-content: space-around;
+    
+    
+    
+  }
+
+  .row>div {
+ 
+    flex: 1;
+    display: inline-block;
+  }
+
+  .row>div:nth-of-type(1) {
+    flex            : 1;
+    
+    
+  }
+
+  .row>div:nth-of-type(1) {
+    flex            : 1;
+    
+    
+  }
+
+  h4 {
+    font-size: 2rem;
+    color: #18F09E;
+    margin-bottom: 0rem;
+  }
+
+  h3 {
+    text-align: center;
+    color: white;
+    padding: .3rem;
+    font-size: 1rem;
+    
+  }
+  h5 {
+    text-align: center;
+    color: #18F09E;
+    padding: .3rem;
+    font-size: 1.2rem;
+    
+  }
+
+  .coinImage{
+    height: 4.5rem;
+    width: 4.5rem;
+ 
+
+    
+}
+
+.coinImageDiv{
+    display:block;
+    text-align: center;
+    
+}
+ hr{
+  background-color: #dfc9c980;
+   width: 90%;
+ }
