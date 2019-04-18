@@ -2,13 +2,9 @@
 
 
 html, body, app-root {
-    height: 100%;
+
     margin: 0;
-    position: fixed;
     min-width: 100%;
-    background-image: url("/assets/img/400x900.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    background-size: cover
+    background-image: linear-gradient(to bottom right,#001434, #38506B);
+
     }
