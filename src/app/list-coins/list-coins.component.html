@@ -1,4 +1,10 @@
+<div class="body">
 
+
+
+
+
+  
 <div *ngIf="coinsBTC['Realtime Currency Exchange Rate']"> 
     <div class='container'  routerLink="/coin/{{coinsBTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
       <div class="row">
@@ -8,7 +14,7 @@
     
         <div>
           
-          <h4>{{coinsBTC['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
+          <h4>{{coins['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
         </div>
     
         <div>
@@ -22,7 +28,7 @@
       </div>
       
         </div>
-<!--     
+    
         <div class='container'  routerLink="/coin/{{coinsLTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
           <div class="row" *ngIf="coinsLTC['Realtime Currency Exchange Rate']">
               <div>
@@ -110,9 +116,9 @@
                          </div>
                         
                       </div>
-                        </div> -->
+                        </div>
     
-                        <!-- <div class='container'  routerLink="/coin/{{coinsXMR['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
+                        <div class='container'  routerLink="/coin/{{coinsXMR['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
                           <div class="row" *ngIf="coinsXMR['Realtime Currency Exchange Rate']">
                               <div>
                                   <img class="coinImage" src="../../assets/img/XMR.png">
@@ -132,8 +138,10 @@
                              </div>
                             
                           </div>
-                            </div> -->
                             </div>
+                            </div>
+</div>
+                          
 
       
     
