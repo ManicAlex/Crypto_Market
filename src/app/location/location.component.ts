@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-location',
   templateUrl: './location.component.html',
@@ -7,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationComponent implements OnInit {
 
-  constructor() { }
+  latitude: any;
+  longitude: any;
+
+  constructor(
+    private http         :HttpClient,
+   
+    
+  ) { }
 
   ngOnInit() {
     // Check the browser supports the geolocation API
@@ -41,14 +51,52 @@ function getPositionSuccess(position) {
   const latitude  = position.coords.latitude;
   const longitude = position.coords.longitude;
   const accuracy  = position.coords.accuracy;
+  
 
   feedbackDiv.innerHTML = `
     <p><strong>Latitude:</strong> ${latitude}<br>
     <strong>Longitude:</strong> ${longitude}<br>
+    
     <strong>Accuracy:</strong> ${accuracy} Metres</p>
-    <p><a href='https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}'>View on Map</a></p>
+    <p><a href='banks'>View on Map</a></p>
+    
+    <agm-map [latitude]="${latitude}" [longitude]="${longitude}">
+    
+    </agm-map>
+
   `;
+  if(!localStorage.getItem('saved' && 'saved1')) {
+    populateStorage();
+  }
+
+
+
+  function populateStorage() {
+    localStorage.setItem('saved', latitude);
+    localStorage.setItem('saved1', longitude);
+  }  
+
+
+
+
+  var llatitude = localStorage.getItem('saved');
+  var llongitude = localStorage.getItem('saved1');
+
+
+
+console.log(llatitude);
+console.log(llongitude);
 }
+
+
+
+this.latitude = localStorage.getItem('saved');
+
+this.longitude = localStorage.getItem('saved1');
+
+console.log(this.longitude);
+
+console.log(this.latitude);
 
 function getPositionFailure(err) {
   feedbackDiv.innerHTML = 'Error retrieving location.';
@@ -75,6 +123,8 @@ getLocationLink
       );
 
   });
+
+  
 
 // Respond, instead, to an entered location name
 // (this is just a mock-up)
