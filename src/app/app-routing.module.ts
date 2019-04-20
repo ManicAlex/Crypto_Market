@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'coin/:coin',     component: CoinComponent},
   {path: 'news',     component: NewsComponent},
   {path: 'location',     component: LocationComponent},
+  {path: 'location/:latitude/:latitude',     component: LocationComponent},
   {path: 'banks',     component: BanksComponent},
   
 ];
