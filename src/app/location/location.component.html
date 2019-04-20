@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <title>Location Example</title>
-</head>
-<body>
 
+<div class="body">
 
-
+<div class="container">
   <h1>Something About My Location</h1>
 
   <!-- Only trigger a geolocation request on user interaction -->
-  <a href='#' id='getLocation'>Find My Location</a>
+  <a routerLink="location/#" id='getLocation'>Find My Location</a>
+
 
   <!-- Offer an alternative -->
   <form action='#'>
@@ -24,7 +18,11 @@
   <div id='feedback'>Location is not yet known...</div>
 
   <!-- Lazy JS load -->
-  <script src='./location.js'></script>
+  <script src='./location.component.ts'></script>
+ 
+  
 
-</body>
-</html>
+
+  </div>
+
+</div>
