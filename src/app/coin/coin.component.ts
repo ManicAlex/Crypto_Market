@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CoinService } from '../services/coin.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Chart } from 'chart.js';
-import { ChartService } from '../services/chart.service';
+import { GoogleBankService } from '../services/googleBank.service';
 import { map } from 'rxjs/operators';
 import { StockData } from '../stockdata';
 import { HttpClient } from '@angular/common/http';
@@ -41,7 +41,7 @@ export class CoinComponent implements OnInit {
 
   constructor(
     private service      :CoinService,
-    private service1     :ChartService,
+    private service1     :GoogleBankService,
     private router       :Router,
     private route        :ActivatedRoute,
     private http         :HttpClient,
