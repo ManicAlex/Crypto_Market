@@ -16,7 +16,7 @@ export class CoinService {
   
 
     showAllCoins(codesign){
-      return this.http.get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign + '&&to_currency=EUR&apikey=2RC330MOF4T41YUY');
+      return this.http.get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign + '&&to_currency=EUR&apikey=PXP1YAA08GRJ6YY1');
     }
 
     //Apikey only allows for 5 api calls per min and i have more
