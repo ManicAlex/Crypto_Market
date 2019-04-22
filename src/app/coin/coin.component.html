@@ -1,5 +1,4 @@
 <div class="body">
-<a href="" ng-click="back()">Back</a>
     <div class='container'>
 
         <div class="coinImageDiv">
@@ -40,11 +39,10 @@
 <hr>
   
 
-
   
       <div class='container'>
           <div>
-              <h5>The Current Market Cap:</h5>
+              <h5>{{ 'COIN.CAP' | translate }}:</h5>
               </div>
         <div>
           <h3>{{  this.NewMark | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
@@ -52,7 +50,7 @@
           <div class='row'>
 
           <div>
-              <h5>Last Volume price:</h5>
+              <h5>{{ 'COIN.VOLUME' | translate }}:</h5>
               </div>
         <div>
           <h3>{{  this.volume | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
@@ -61,7 +59,7 @@
           <div class='row'>
 
           <div>
-            <h5>Last Opening price:</h5>
+            <h5>{{ 'COIN.OPEN' | translate }}:</h5>
             </div>
       <div>
         <h3>{{  this.open | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
@@ -69,7 +67,7 @@
           </div>
           <div class='row'>
         <div>
-          <h5>Last Closing price:</h5>
+          <h5>{{ 'COIN.CLOSE' | translate }}:</h5>
           </div>
     <div>
       <h3>{{  this.close | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
