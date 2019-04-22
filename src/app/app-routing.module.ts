@@ -5,10 +5,13 @@ import {CoinComponent}         from '../app/coin/coin.component';
 import {NewsComponent}         from '../app/news/news.component';
 import {LocationComponent}         from '../app/location/location.component';
 import {BanksComponent}         from '../app/banks/banks.component';
+import {HomeComponent}         from '../app/home/home.component';
 
 
 const routes: Routes = [
-  {path:  "", pathMatch:  "full",redirectTo:  "list-coins"},
+  {path:  "", pathMatch:  "full",redirectTo:  "home"},
+  {path: 'home',     component: HomeComponent},
+  {path: 'home/list-coins',     component: ListCoinsComponent},
   {path: 'list-coins',     component: ListCoinsComponent},
   {path: 'coin/:coin',     component: CoinComponent},
   {path: 'news',     component: NewsComponent},
