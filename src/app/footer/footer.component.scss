@@ -7,7 +7,8 @@ html {
 
 .footer {
 
-    background-image: linear-gradient(to bottom right,#001434, #3A506B);
+    background-image: linear-gradient( #3A506B, #07224D);
+    
     
   }
 
@@ -38,9 +39,9 @@ html {
   }
   
   .nav-item {
-    float: left;
     display: block;
     text-align: center;
+    height: 4rem;
   }
 
   .nav-link {
@@ -50,17 +51,38 @@ html {
     text-align: center;
   }
 
-  a {
-    font-size: 1.5rem;
-    color: #18F09E;
-  }
+  .coinImage{
+    height: 4rem;
+    padding:.5rem;
+    position: absolute;
+}
 
-  li a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+.coinImageHover {
+  z-index: 9999;
+  transition: opacity .5s linear;
+  cursor: pointer;
+  height: 4rem;
+  padding:.5rem;
+}
 
-  li a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
+.coinImage:hover {
+  opacity: 0;
+}
+
+.coinImage1{
+  height: 4rem;
+  padding:.5rem;
+  position: absolute;
+}
+
+.coinImageHover1 {
+z-index: 9999;
+transition: opacity .5s linear;
+cursor: pointer;
+height: 4rem;
+padding:.5rem;
+}
+
+.coinImage1:hover {
+opacity: 0;
+}
