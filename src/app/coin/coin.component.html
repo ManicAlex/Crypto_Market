@@ -1,79 +1,77 @@
 <div class="body">
-    <div class='container'>
+  <div class='container'>
 
-        <div class="coinImageDiv">
-            <img class="coinImage" src="../../assets/img/{{codesign}}.png">
-        </div>
+    <div class="coinImageDiv">
+      <img class="coinImage" src="../../assets/img/{{codesign}}.png">
+    </div>
 
-        <div class="row">
- 
+    <div class="row" *ngIf="this.stock && ['Meta Data']">
+
+    <div>
+          <h4>{{this.stock['Meta Data']['3. Digital Currency Name']}}</h4>
+    </div>
       
-          <div>
-            
-            <h4>{{this.stock['Meta Data']['3. Digital Currency Name']}}</h4>
-          </div>
-      
-          <div>
-            <h4>{{this.stock['Meta Data']['2. Digital Currency Code']}}</h4>
-            </div>
+    <div>
+          <h4>{{this.stock['Meta Data']['2. Digital Currency Code']}}</h4>
+    </div>
 
-          
-        </div>
-
-
-          </div>
-
-
-          <hr>
-  
-
-
-<div class="table-responsive">
- 
-<div *ngIf="chart">
-    
-    <canvas id="canvas" style="min-height:350px" class="table">{{ chart }}</canvas>
-  </div>
+    </div>
 </div>
+
+<hr>
+
+  <div class="table-responsive">
+    <div *ngIf="chart">
+      <canvas id="canvas" style="min-height:350px" class="table">{{ chart }}</canvas>
+    </div>
+  </div>
 
 <hr>
   
 
   
-      <div class='container'>
-          <div>
-              <h5>{{ 'COIN.CAP' | translate }}:</h5>
-              </div>
-        <div>
-          <h3>{{  this.NewMark | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
-          </div>
-          <div class='row'>
-
-          <div>
-              <h5>{{ 'COIN.VOLUME' | translate }}:</h5>
-              </div>
-        <div>
-          <h3>{{  this.volume | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
-          </div>
-          </div>
-          <div class='row'>
-
-          <div>
-            <h5>{{ 'COIN.OPEN' | translate }}:</h5>
-            </div>
-      <div>
-        <h3>{{  this.open | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
-        </div>
-          </div>
-          <div class='row'>
-        <div>
-          <h5>{{ 'COIN.CLOSE' | translate }}:</h5>
-          </div>
+ <div class='container'>
     <div>
-      <h3>{{  this.close | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
-      </div>
-      </div>
-            </div>
-            <hr>
-            </div>
+          <h5>{{ 'COIN.CAP' | translate }}:</h5>
+    </div>
+
+    <div>
+          <h3>{{  this.NewMark | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
+    </div>
+
+  <div class='row'>
+
+    <div>
+          <h5>{{ 'COIN.VOLUME' | translate }}:</h5>
+    </div>
+
+    <div>
+          <h3>{{  this.volume | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div>
+          <h5>{{ 'COIN.OPEN' | translate }}:</h5>
+    </div>
+
+    <div>
+          <h3>{{  this.open | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
+    </div>
+  </div>
+
+  <div class='row'>
+    <div>
+          <h5>{{ 'COIN.CLOSE' | translate }}:</h5>
+    </div>
+
+    <div>
+          <h3>{{  this.close | currency:'EUR':'symbol-narrow':'0.2-2' }}</h3>
+    </div>
+  </div>
+  
+ </div>
+
+<hr>
+</div>
             
