@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import {HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { FormsModule } from '@angular/forms';
 
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -46,7 +48,9 @@ const translateModule = TranslateModule.forRoot({loader: {
     HttpClientModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxSpinnerModule,
     translateModule,
+    FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDEFYZV7hfzWR8flJQ_xi_WJ0hh6vDaesk'
     })
