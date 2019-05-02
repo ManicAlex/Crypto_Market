@@ -1,145 +1,153 @@
+
 <div class="body">
 
-
- 
-
-
-  
-<div *ngIf="coinsBTC['Realtime Currency Exchange Rate']"> 
+<div *ngIf="coinsBTC && ['Realtime Currency Exchange Rate']"> 
     <div class='container'  routerLink="/coin/{{coinsBTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
       <div class="row">
-          <div>
-              <img class="coinImage" src="../../assets/img/BTC.png">
-          </div>
-    
         <div>
-          
+              <img class="coinImage" src="../../assets/img/BTC.png">
+        </div>
+
+        <div>
           <h4>{{coinsBTC['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
         </div>
     
         <div>
           <h4>{{coinsBTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
-          </div>
-    
-          <div>
-         <h4>{{coinsBTC['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
-         </div>
-        
-      </div>
-      
         </div>
+
+        <div>
+         <h4>{{coinsBTC['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+
+
+<div *ngIf="coinsLTC && ['Realtime Currency Exchange Rate']"> 
+  <div class='container'  routerLink="/coin/{{coinsLTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
+    <div class="row">
+      <div>
+            <img class="coinImage" src="../../assets/img/LTC.png">
+      </div>
+
+      <div>
+        <h4>{{coinsLTC['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
+      </div>
+  
+      <div>
+        <h4>{{coinsLTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
+      </div>
+
+      <div>
+       <h4>{{coinsLTC['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="coinsDASH && ['Realtime Currency Exchange Rate']"> 
+  <div class='container'  routerLink="/coin/{{coinsDASH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
+    <div class="row">
+      <div>
+            <img class="coinImage" src="../../assets/img/DASH.png">
+      </div>
+
+      <div>
+        <h4>{{coinsDASH['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
+      </div>
+  
+      <div>
+        <h4>{{coinsDASH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
+      </div>
+
+      <div>
+       <h4>{{coinsDASH['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+      </div>
+
+    </div>
+  </div>
+</div>
+ 
+
+
+<div *ngIf="coinsETH && ['Realtime Currency Exchange Rate']"> 
+  <div class='container'  routerLink="/coin/{{coinsETH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
+    <div class="row">
+      <div>
+            <img class="coinImage" src="../../assets/img/ETH.png">
+      </div>
+
+      <div>
+        <h4>{{coinsETH['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
+      </div>
+  
+      <div>
+        <h4>{{coinsETH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
+      </div>
+
+      <div>
+       <h4>{{coinsETH['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="coinsXRP && ['Realtime Currency Exchange Rate']"> 
+  <div class='container'  routerLink="/coin/{{coinsXRP['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
+    <div class="row">
+      <div>
+            <img class="coinImage" src="../../assets/img/XRP.png">
+      </div>
+
+      <div>
+        <h4>{{coinsXRP['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
+      </div>
+  
+      <div>
+        <h4>{{coinsXRP['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
+      </div>
+
+      <div>
+       <h4>{{coinsXRP['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+      </div>
+
+    </div>
+  </div>
+</div>
     
-        <div class='container'  routerLink="/coin/{{coinsLTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
-          <div class="row" *ngIf="coinsLTC['Realtime Currency Exchange Rate']">
-              <div>
-                  <img class="coinImage" src="../../assets/img/LTC.png">
-              </div>
-        
-            <div>
-              
-              <h4>{{coinsLTC['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
-            </div>
-        
-            <div>
-              <h4>{{coinsLTC['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
-              </div>
-        
-              <div>
-             <h4>{{coinsLTC['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'4.2-2'}}</h4>
-             </div>
-            
-          </div>
-            </div>
-<!--     
-            <div class='container'  routerLink="/coin/{{coinsDASH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
-              <div class="row" *ngIf="coinsDASH['Realtime Currency Exchange Rate']">
-                  <div>
-                      <img class="coinImage" src="../../assets/img/DASH.png">
-                  </div>
-            
-                <div>
-                  
-                  <h4>{{coinsDASH['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
-                </div>
-            
-                <div>
-                  <h4>{{coinsDASH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
-                  </div>
-            
-                  <div>
-                 <h4>{{coinsDASH['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'4.2-2'}}</h4>
-                 </div>
-                
-              </div>
-                </div>
-    
-                <div class='container'  routerLink="/coin/{{coinsETH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
-                  <div class="row" *ngIf="coinsETH['Realtime Currency Exchange Rate']">
-                      <div>
-                          <img class="coinImage" src="../../assets/img/ETH.png">
-                      </div>
-                
-                    <div>
-                      
-                      <h4>{{coinsETH['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
-                    </div>
-                
-                    <div>
-                      <h4>{{coinsETH['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
-                      </div>
-                
-                      <div>
-                     <h4>{{coinsETH['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'4.2-2'}}</h4>
-                     </div>
-                    
-                  </div>
-                    </div>
-      
-    
-                    <div class='container'  routerLink="/coin/{{coinsXRP['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
-                      <div class="row" *ngIf="coinsXRP['Realtime Currency Exchange Rate']">
-                          <div>
-                              <img class="coinImage" src="../../assets/img/XRP.png">
-                          </div>
-                    
-                        <div>
+
+<!-- <div *ngIf="coinsXMR && ['Realtime Currency Exchange Rate']"> 
+  <div class='container'  routerLink="/coin/{{coinsXMR['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
+    <div class="row">
+      <div>
+            <img class="coinImage" src="../../assets/img/XMR.png">
+      </div>
+
+      <div>
+        <h4>{{coinsXMR['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
+      </div>
+  
+      <div>
+        <h4>{{coinsXMR['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
+      </div>
+
+      <div>
+       <h4>{{coinsXMR['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+      </div>
+
+    </div>
+  </div>
+</div> -->
                           
-                          <h4>{{coinsXRP['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
-                        </div>
-                    
-                        <div>
-                          <h4>{{coinsXRP['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
-                          </div>
-                    
-                          <div>
-                         <h4>{{coinsXRP['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'4.2-2'}}</h4>
-                         </div>
-                        
-                      </div>
-                        </div>
-    
-                        <div class='container'  routerLink="/coin/{{coinsXMR['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
-                          <div class="row" *ngIf="coinsXMR['Realtime Currency Exchange Rate']">
-                              <div>
-                                  <img class="coinImage" src="../../assets/img/XMR.png">
-                              </div>
-                        
-                            <div>
-                              
-                              <h4>{{coinsXMR['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
-                            </div>
-                        
-                            <div>
-                              <h4>{{coinsXMR['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
-                              </div>
-                        
-                              <div>
-                             <h4>{{coinsXMR['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'4.2-2'}}</h4>
-                             </div>
-                            
-                          </div>
-                            </div>
-                            </div> -->
 </div>
                           
 
