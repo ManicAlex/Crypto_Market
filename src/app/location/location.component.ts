@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-
-import { HttpClient } from '@angular/common/http';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { HttpClient        } from '@angular/common/http';
 
 @Component({
   selector: 'app-location',
@@ -9,30 +8,34 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./location.component.scss']
 })
 export class LocationComponent implements OnInit {
-
-  latitude: any;
-  longitude: any;
+  latitude:   any;
+  longitude:  any;
+  accuracy:   any;
+  lat:        any;
+  lng:        any;
 
   constructor(
     private http         :HttpClient,
+    private spinner      :NgxSpinnerService
    
     
   ) { }
 
   ngOnInit() {
+
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 3000);
+
+
     // Check the browser supports the geolocation API
 if (!("geolocation" in navigator)) {
   alert('Opps!. Your device cannot be used to find your location...');
 }
 
-
-// ##############################################
-// # Basic tracking
-// ##############################################
-
 // Get and cache DOM objects
 const getLocationLink     = document.querySelector('#getLocation');
-const manualLocationInput = document.querySelector('#manualLocation');
 const feedbackDiv         = document.querySelector('#feedback');
 
 // An option for the geolocation API, which in our case is
@@ -40,72 +43,29 @@ const feedbackDiv         = document.querySelector('#feedback');
 const locationServiceOpts = {enableHighAccuracy: true}
 
 
-// ##############################################
-// # Callbacks
-// ##############################################
-
 function getPositionSuccess(position) {
 
   console.log(position);
 
-  const latitude  = position.coords.latitude;
-  const longitude = position.coords.longitude;
+  this.lat = position.coords.latitude;
+  this.lng = position.coords.longitude;
+
+  sessionStorage.setItem('lat', this.lat);
+  sessionStorage.setItem('lat', this.lng);
+
   const accuracy  = position.coords.accuracy;
   
 
   feedbackDiv.innerHTML = `
-    <p><strong>Latitude:</strong> ${latitude}<br>
-    <strong>Longitude:</strong> ${longitude}<br>
-    
-    <strong>Accuracy:</strong> ${accuracy} Metres</p>
-    <p><a href='banks'>View on Map</a></p>
-    
-    <agm-map [latitude]="${latitude}" [longitude]="${longitude}">
-    
-    </agm-map>
-
-  `;
-  if(!localStorage.getItem('saved' && 'saved1')) {
-    populateStorage();
+    <h3><strong>Latitude:</strong> ${this.lat}<br>
+    <strong>Longitude:</strong> ${this.lng}<br>
+    <strong>Accuracy:</strong> ${accuracy} Metres</h3>`;
   }
 
-
-
-  function populateStorage() {
-    localStorage.setItem('saved', latitude);
-    localStorage.setItem('saved1', longitude);
-  }  
-
-
-
-
-  var llatitude = localStorage.getItem('saved');
-  var llongitude = localStorage.getItem('saved1');
-
-
-
-console.log(llatitude);
-console.log(llongitude);
-}
-
-
-
-this.latitude = localStorage.getItem('saved');
-
-this.longitude = localStorage.getItem('saved1');
-
-console.log(this.longitude);
-
-console.log(this.latitude);
 
 function getPositionFailure(err) {
   feedbackDiv.innerHTML = 'Error retrieving location.';
 }
-
-
-// ##############################################
-// # Event Listeners
-// ##############################################
 
 // Respond to clicks on 'find my location'
 getLocationLink
@@ -117,21 +77,34 @@ getLocationLink
     navigator
       .geolocation
       .getCurrentPosition(
-        getPositionSuccess,
-        getPositionFailure,
+        getPositionSuccess.bind(this),
+        getPositionFailure.bind(this),
         locationServiceOpts
       );
 
   });
 
-  
+  }
 
-// Respond, instead, to an entered location name
-// (this is just a mock-up)
-manualLocationInput
-  .addEventListener('change', () => {
-    feedbackDiv.innerHTML = `This feature has not been implemented.`;
-  });
+
+  towns =[ 
+          {'name':'NONE', 'lat': '0', 'lng': '0'},
+          {'name':'Dundalk', 'lat': '54.005318', 'lng': '-6.402506'},
+          {'name':'Dublin', 'lat': '53.3492935', 'lng': '-6.2610914'},
+          {'name':'Drogheda', 'lat': '54.0053249', 'lng': '-6.4023248'},
+          {'name':'Cavan', 'lat': '53.990958', 'lng': '-7.360217'},
+        ];
+  
+  PickTown = this.towns[0];
+  
+  onChange(towns: any){
+    this.lat = towns.lat;
+    this.lng = towns.lng;
+    sessionStorage.setItem('lat', this.lat);
+    sessionStorage.setItem('lat', this.lng);
   }
 
 }
+
+  
+
