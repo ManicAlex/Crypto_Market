@@ -2,27 +2,28 @@
 <div class="body">
 
 <div class="container">
-  <h1>Something About My Location</h1>
+  <h1>Find Your closest bank</h1>
 
-  <!-- Only trigger a geolocation request on user interaction -->
-  <a routerLink="location/#" id='getLocation'>Find My Location</a>
+  <a id='getLocation'>Find My Location</a>
 
 
   <!-- Offer an alternative -->
-  <form action='#'>
-    <label for='manualLocation'>Or, enter your city...</label>
-    <input type='text' id='manualLocation' placeholder=''>
-  </form>
+  <select [(ngModel)]="PickTown" (ngModelChange)="onChange($event)">
+    <option *ngFor="let town of towns" [ngValue]="town">
+      {{town.name}}
+    </option>
+  </select>
+ 
 
   <!-- Show some information about the location, when known -->
   <div id='feedback'>Location is not yet known...</div>
 
+  <div *ngIf='lat'>
+      <a routerLink="/banks/{{lat}}/{{lng}}" id='getLocation'>Go to banks</a>
+  </div>
+
   <!-- Lazy JS load -->
   <script src='./location.component.ts'></script>
- 
-  
-
-
-  </div>
+</div>
 
 </div>
