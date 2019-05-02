@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'news',     component: NewsComponent},
   {path: 'location',     component: LocationComponent},
   {path: 'location/:latitude/:latitude',     component: LocationComponent},
-  {path: 'banks',     component: BanksComponent},
+  {path: 'banks/:lat/:lng',     component: BanksComponent},
   
 ];
 
