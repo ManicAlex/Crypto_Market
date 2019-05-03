@@ -23,12 +23,11 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.png",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss", 
-              "node_modules/bootstrap/dist/scss/bootstrap.min.css"
+              "src/styles.scss"
             ],
             "scripts": ["node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"],
@@ -90,7 +89,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.png",
               "src/assets"
             ]
           }
