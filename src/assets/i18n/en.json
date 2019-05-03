@@ -1,0 +1,14 @@
+{
+    "HOME": {
+      "TITLE": "What is Crypto Market?",
+      "TEXT": "Crypto Market is a way of keeping up to date with the latest exchange rates of the top crypto currency on the market. It provides real time exchange rates and daily updates on the stock market in a clear understanding way with the help of charts. The charts display the low and high of the crypto currency in daily intervals as well as the latest market capital, volume, opening and closing prices. The last feature crypto market offers is the display of banks nearest the user using geolocation. Stay up to date on your crypto currency anywhere any time!",
+      "BUTTON": "View Crypto Coins"
+    },
+    "COIN": {
+        "CAP": "The Current Market Cap",
+        "VOLUME": "Last Volume price",
+        "OPEN": "Last Opening price",
+        "CLOSE": "Last Closing price"
+      }
+
+  }

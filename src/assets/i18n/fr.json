@@ -1,0 +1,14 @@
+{
+    "HOME": {
+      "TITLE": "Qu'est-ce que le marché de la crypto?",
+      "TEXT": "Crypto Market est un moyen de se tenir au courant des derniers taux de change de la principale crypto-monnaie du marché. Il fournit des taux de change en temps réel et des mises à jour quotidiennes sur le marché boursier d'une manière claire et compréhensible à l'aide de graphiques. Les graphiques affichent le bas et le haut de la crypto-monnaie en intervalles quotidiens, ainsi que les derniers capitaux du marché, les volumes, les prix d'ouverture et de clôture. La dernière fonctionnalité offerte par le marché de la crypto est l'affichage des banques les plus proches de l'utilisateur via la géolocalisation. Restez à jour sur votre devise crypto n'importe où n'importe quand!",
+      "BUTTON": "Voir les pièces cryptographiques"
+    },
+    "COIN": {
+        "CAP": "La capitalisation boursière actuelle",
+        "VOLUME": "Prix dernier volume",
+        "OPEN": "Dernier cours d'ouverture",
+        "CLOSE": "Dernier cours de clôture"
+      }
+
+  }
