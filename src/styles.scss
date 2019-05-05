@@ -9,7 +9,7 @@ html, body, app-root {
     height: 100%;
     margin: 0;
     min-width: 100%;
-    background-image: linear-gradient(to bottom right,#001434, #38506B, #07224D);
+    background-color: #07224D;
     background-repeat: no-repeat;
     background-attachment: fixed;
  
@@ -22,6 +22,8 @@ html, body, app-root {
         width: 100%;
         height: 3.5rem;
         top: 0;
+        overflow: hidden;
+        
     
     }
     
