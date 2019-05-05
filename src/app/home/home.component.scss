@@ -1,59 +1,180 @@
-.coinImage {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.container{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    width: 90%;
-    border-radius: 1.5rem;
+html {
+    font-size:          16px;
+    box-sizing:         border-box;
     
-}
+  }
 
-button {
-    display: block;
-    margin: auto;
+  .body{
+      height:           100%;
+  }
+ 
+  
+  .container {
+      margin-top:       1rem;
+      margin-bottom:    1rem;
+      width:            95%;
+      height:           auto;
+      margin:           auto;
+      justify-content:  center;
+      align-items:      center;
+      
+  }
+  .body>.container:nth-of-type(1) {
+    margin-top:         2rem;
+    margin-bottom:      2rem;
+    
+  }
+ 
 
-}
+ 
+
+  .home {
+    display:            flex;    
+    margin:             auto;
+    flex-direction:     column;
+    width:              100%;
+    height:             auto;
+    position:           absolute;
+    transform: translate(-50%, -50%);
+    left:               50%;
+    top:                50%;
+    padding:            1rem;
+    
+  }
+
+  .home>div {
+ 
+    flex:               1;
+    justify-content:    center;
+    align-items:        center;
+    
+  }
+
+  .home>div:nth-of-type(1) {
+    flex            :   0;
+    margin-top:         .5rem;
+    margin-bottom:      .5rem;
+    text-align:         center
+    
+    
+  }
+
+  .home>div:nth-of-type(2) {
+    flex            :   0;
+    
+    
+  }
+
+  .home>div:nth-of-type(3) {
+    flex            :   1;
+    
+   
+  }
+
+  .home>div:nth-of-type(4) {
+    flex            :   1;
+    
+    
+  }
+
+ 
+
+
+  .coinImage{
+      height:           4.5rem;
+      width:            8.5rem;
+      text-align:       center;
+  }
+
+    button {
+    display:            block;
+    margin:             auto;
+
+  }
+
 
 .coinsButton{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    background-color: #dfc9c980;
-    width: 60%;
-    border-radius: 2rem;
+    margin-top:         1rem;
+    margin-bottom:      1rem;
+    background-image: linear-gradient(to right, #125E8A, #163463, #125E8A);
+    border-radius:      1rem;
    
     
 }
 
 .coinsButton:hover{
-    background-color: #4e3cf080;
+    background-color: #125E8A80;
 }
 
 h1 {
-    font-size: 2rem;
-    color: #18F09E;
-    padding: .5rem;
-    margin-bottom: 0rem;
-    text-align: center;
+    font-size:          1.5rem;
+    color:            #3FC96D;
+    padding:            .5rem;
+    margin-bottom:      0rem;
+    text-align:         center;
   }
 
 h2 {
-    font-size: 1.5rem;
-    color: white;
-    padding: .5rem;
-    margin-bottom: 0rem;
-    text-align: center;
+    font-size:          .9rem;
+    color:             white;
+    padding:            .5rem;
+    margin-bottom:      0rem;
+    text-align:         center;
   }
 
   p {
-    font-size: 1rem;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 0rem;
+    font-size:          1rem;
+    color:            white;
+    padding:            .6rem;
+    text-align:         center;
+    margin-bottom:      0rem;
   }
+
+
+ @media only screen and (min-width: 768px) {
+
+    p {
+        font-size:      1.5rem;
+        color:        white;
+        padding:        .6rem;
+        text-align:     center;
+        margin-bottom:  0rem;
+
+
+      }
+
+      h1 {
+        font-size:      2rem;
+        color:        #3FC96D;
+        padding:        .5rem;
+        margin-bottom:  0rem;
+        text-align:     center;
+      }
+
+      h2 {
+        font-size:      1.5rem;
+        color:        white;
+        padding:        .5rem;
+        margin-bottom:  0rem;
+        text-align:     center;
+      }
+
+
+      .home {
+        display:        flex;    
+        margin:         auto;
+        flex-direction: column;
+        width:          80%;
+        height:         auto;
+        position:       absolute;
+        transform: translate(-50%, -50%);
+        left:           50%;
+        top:            50%;
+        padding:        1rem;
+
+        
+      }
+        
+        
+      
+  } 
