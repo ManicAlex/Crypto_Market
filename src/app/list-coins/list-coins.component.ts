@@ -18,6 +18,12 @@ coinsDASH:  any;
 coinsETH:   any;
 coinsXRP:   any;
 coinsXMR:   any;
+BTC:        any;
+LTC:        any;
+DASH:       any;
+ETH:        any;
+XRP:        any;
+XMR:        any;
 
   constructor(
     private spinner     : NgxSpinnerService,
@@ -35,44 +41,61 @@ coinsXMR:   any;
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-    }, 5000);
+    }, 3000);
+
+  setTimeout(function() { localStorage.clear(); }, (5 * 60 * 1000));
     
 
-
+  if(localStorage.getItem("BTC") == null){
     this.service.showAllCoins("BTC")
-    .subscribe((data) => {
-      this.coinsBTC = data;
-      console.log(this.coinsBTC);
+    .subscribe(data => {
+    this.coinsBTC = data;
+    localStorage.setItem("BTC", JSON.stringify(this.coinsBTC));
     });
+  }else{
+    this.coinsBTC = JSON.parse(localStorage.getItem("BTC"));
+  }
 
+
+  if(localStorage.getItem("LTC") == null){
     this.service.showAllCoins("LTC")
-    .subscribe((data) => {
-      this.coinsLTC = data;
-      console.log(this.coinsLTC);
+    .subscribe(data => {
+    this.coinsLTC = data;
+    localStorage.setItem("LTC", JSON.stringify(this.coinsLTC));
     });
+  }else{
+    this.coinsLTC = JSON.parse(localStorage.getItem("LTC"));
+  }
 
-    this.service.showAllCoins1("DASH")
-    .subscribe((data) => {
-      this.coinsDASH = data;
-      console.log(this.coinsDASH);
-    });
+  if(localStorage.getItem("DASH") == null){
+    this.service.showAllCoins("DASH")
+    .subscribe(data => {
+    this.coinsDASH = data;
+    localStorage.setItem("DASH", JSON.stringify(this.coinsDASH));
+  });
+  }else{
+    this.coinsDASH = JSON.parse(localStorage.getItem("DASH"));
+  }
 
-    this.service.showAllCoins1("ETH")
-    .subscribe((data) => {
-      this.coinsETH = data;
-      console.log(this.coinsETH);
-    });
+  if(localStorage.getItem("ETH") == null){
+    this.service.showAllCoins("ETH")
+    .subscribe(data => {
+    this.coinsETH = data;
+    localStorage.setItem("ETH", JSON.stringify(this.coinsETH));
+  });
+  }else{
+    this.coinsETH = JSON.parse(localStorage.getItem("ETH"));
+  }
 
-    this.service.showAllCoins2("XRP")
-    .subscribe((data) => {
-      this.coinsXRP = data;
-      console.log(this.coinsXRP);
-    });
 
-    this.service.showAllCoins2("XMR")
-    .subscribe((data) => {
-      this.coinsXMR = data;
-      console.log(this.coinsXMR);
-    });
+  if(localStorage.getItem("XMR") == null){
+    this.service.showAllCoins1("XMR")
+    .subscribe(data => {
+    this.coinsXMR = data;
+    localStorage.setItem("XMR", JSON.stringify(this.coinsXMR));
+  });
+  }else{
+    this.coinsXMR = JSON.parse(localStorage.getItem("XMR"));
+  }
   }
 }
