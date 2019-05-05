@@ -61,6 +61,7 @@ XMR:        any;
     this.service.showAllCoins("LTC")
     .subscribe(data => {
     this.coinsLTC = data;
+    console.log(this.coinsLTC);
     localStorage.setItem("LTC", JSON.stringify(this.coinsLTC));
     });
   }else{
@@ -71,6 +72,7 @@ XMR:        any;
     this.service.showAllCoins("DASH")
     .subscribe(data => {
     this.coinsDASH = data;
+    console.log(this.coinsDASH);
     localStorage.setItem("DASH", JSON.stringify(this.coinsDASH));
   });
   }else{
@@ -81,6 +83,7 @@ XMR:        any;
     this.service.showAllCoins("ETH")
     .subscribe(data => {
     this.coinsETH = data;
+    console.log(this.coinsETH);
     localStorage.setItem("ETH", JSON.stringify(this.coinsETH));
   });
   }else{
@@ -92,6 +95,7 @@ XMR:        any;
     this.service.showAllCoins1("XMR")
     .subscribe(data => {
     this.coinsXMR = data;
+    console.log(this.coinsXMR);
     localStorage.setItem("XMR", JSON.stringify(this.coinsXMR));
   });
   }else{
