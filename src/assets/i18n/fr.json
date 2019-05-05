@@ -6,9 +6,9 @@
     },
     "COIN": {
         "CAP": "La capitalisation boursière actuelle",
-        "VOLUME": "Prix dernier volume",
-        "OPEN": "Dernier cours d'ouverture",
-        "CLOSE": "Dernier cours de clôture"
+        "VOLUME": "Prix volume",
+        "OPEN": "cours d'ouverture",
+        "CLOSE": "cours de clôture"
       }
 
   }
