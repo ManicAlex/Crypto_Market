@@ -1,97 +1,171 @@
 
 
 html {
-    font-size: 16px;
-    box-sizing: border-box;
+    font-size:            16px;
+    box-sizing:           border-box;
     
   }
 
  
   
   .container {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      background-color: #dfc9c980;
-      width: 90%;
-      border-radius: 1rem;
-      height: 5rem;
+      margin-top:         1rem;
+      margin-bottom:      1rem;
+      background-color: #125E8A;
+      width:              95%;
+      border-radius:      .7rem;
+      height:             7rem;
   }
-  .container:nth-of-type(1) {
-    margin-top: 2rem;
+  .body>.container:nth-of-type(1) {
+    margin-top:           3rem;
     
   }
-  .container:nth-of-type(2) {
-    margin-top: 1rem;
+  .body>.container:nth-of-type(2) {
+    margin-top:           1rem;
     
   }
-  .container:nth-of-type(3) {
-    margin-top: 1rem;
-    
-  }
-  .container:nth-of-type(4) {
-    margin-top: 1rem;
-    
-  }
-  .container:nth-of-type(5) {
-    margin-top: 1rem;
-    
-  }
-  .container:nth-of-type(6) {
-    margin-top: 1rem;
-  
-    
-  }
+
 
  
 
   .row {
-    display: flex;    
-     margin-left: .1rem;
-    margin-right: .1rem;
-    align-items: center;
-    justify-content: space-around;
-    height: 5rem;
+    display:              flex;    
+    align-items:          center;
+    justify-content:      space-around;
+    height:               100%;
+    padding:              .4rem;
     
     
   }
 
   .row>div {
  
-    flex: 1;
-    display: inline-block;
+    flex:                  1;
+    display:               inline-block;
   }
 
   .row>div:nth-of-type(1) {
-    flex            : 1;
+    flex:                  1;
     
     
   }
 
   .row>div:nth-of-type(2) {
-    flex            : 2;
+    flex:                  2;
+    padding:              .2rem;
+    text-align:           left;
     
   }
 
   .row>div:nth-of-type(3) {
-    flex            : 2;
-    text-align: center;
+    flex:                 2;
+    text-align:           center;
+    padding:              .2rem;
   }
 
   .row>div:nth-of-type(4) {
-    flex            : 2;
-    text-align: center;
+    flex:                 2;
+    text-align:           left;
+    padding:              .2rem;
   }
 
   h4 {
-    font-size: 1.2rem;
-    color: #18F09E;
-    margin-bottom: 0rem;
+    font-size:            1.4rem;
+    color:              #ffffff;
+    margin-bottom:        0rem;
+    
+  }
+
+  h3 {
+    font-size:             1.5rem;
+    color:                #31f018;
+    margin-bottom:         0rem;
+    padding:              .3rem;
+    
   }
 
   .coinImage{
-      height: 5rem;
-      width: 5rem;
+      height:             5rem;
+      width:              5rem;
       
   }
+
+
+  @media only screen and (min-width: 768px) {
+
+    p {
+        font-size:         1.5rem;
+        color:           white;
+        padding:           .6rem;
+        text-align:        center;
+        margin-bottom:     0rem;
+
+
+      }
+
+      h4 {
+        font-size:          1.9rem;
+        color:            #ffffff;
+        margin-bottom:      0rem;
+        
+      }
+    
+      h3 {
+        font-size:          1.8rem;
+        color:            #31f018;
+        margin-bottom:      0rem;
+        padding:            .3rem;
+        
+      }
+
+      .row {
+        display:            flex;    
+        align-items:        center;
+        justify-content:    space-around;
+        height:             100%;
+        
+        
+      }
+    
+      .row>div {
+     
+        flex: 1;
+        display:            inline-block;
+      }
+    
+      .row>div:nth-of-type(1) {
+        flex            :   1;
+        
+        
+        
+      }
+    
+      .row>div:nth-of-type(2) {
+        flex            : 2;
+        margin-left:    2rem;
+        
+      }
+    
+      .row>div:nth-of-type(3) {
+        flex            : 2;
+        text-align:      center;
+        padding:        .2rem;
+      }
+    
+      .row>div:nth-of-type(4) {
+        flex            : 2;
+        text-align:     right;
+        padding:        .2rem;
+        margin-right:   2rem;
+      }
+
+      .coinImage{
+        height:         5rem;
+        width:          5rem;
+        padding:        .2rem;
+        margin-left:    2rem;
+        
+    }
+    }
 
   
