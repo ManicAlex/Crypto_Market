@@ -1,38 +1,172 @@
 .container {
-    background-color: #dfc9c980;
-    width: 90%;
-    position: absolute;
+    width:        90%;
+    position:     absolute;
     transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    padding: 1rem;
+    left:         50%;
+    top:          50%;
+    padding:      1rem;
+}
+
+select{
+  color:        #07224D;
+  background:   #3FC96D;
 }
 
 
 agm-map {
-    height: 300px;
+    height:       300px;
   }
 
   h1 {
-    font-size: 2rem;
-    color: #18F09E;
-    padding: .5rem;
+    font-size:    1.7rem;
+    color:      #3FC96D;
+    padding:      .5rem;
     margin-bottom: 0rem;
-    text-align: center;
+    text-align:   center;
   }
 
-h2 {
-    font-size: 1.5rem;
-    color: white;
-    padding: .5rem;
+h3 {
+    font-size:    1.5rem;
+    color:      white;
+    padding:      .5rem;
     margin-bottom: 0rem;
-    text-align: center;
+    text-align:   center;
   }
 
   p {
-    font-size: 1rem;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    font-size:    1rem;
+    color:      white;
+    padding:      .5rem;
+    text-align:   center;
     margin-bottom: 0rem;
   }
+
+  h4 {
+    font-size:    .9rem;
+    color:      white;
+    padding:      .1rem;
+    text-align:   center;
+    margin-bottom: 0rem;
+  }
+
+  h2 {
+    text-align:   left;
+    color:      white;
+    padding:      .5rem;
+    font-size:    1rem;
+    margin-bottom: 0;
+  }
+
+  h5 {
+    text-align:   left;
+    color:      #3FC96D;
+    padding:      .5rem;
+    font-size:    1.3rem;
+    margin-bottom: 0;
+    
+  }
+
+  .row {
+    display:      flex;    
+    margin-left:  .1rem;
+    margin-right: .1rem;
+    text-align:   center;
+    align-items:  center;
+    justify-content: center;
+    
+    
+    
+  }
+
+  .row>div {
+ 
+    flex: 1;
+    display:      inline-block;
+
+  }
+
+  .row>div:nth-of-type(1) {
+    flex            : 1;
+    width:            50%;
+    
+  }
+
+  .row>div:nth-of-type(2) {
+    flex            : 1;
+    width:            50%;
+    
+  }
+
+  button {
+    display:          block;
+    margin:           auto;
+
+}
+
+
+.mapsButton{
+    margin-top:       1rem;
+    margin-bottom:    1rem;
+    background-image: linear-gradient(to right, #125E8A, #163463, #125E8A);
+    border-radius:    1rem;
+}
+
+.mapsButtonDiv{
+  margin-top:         1rem;
+  margin-bottom:      1rem;
+}
+
+
+.locationButton{
+  margin-top:         1rem;
+  margin-bottom:      1rem;
+  background-image: linear-gradient(to right, #125E8A, #163463, #125E8A);
+  border-radius:      1rem;
+  padding:            .4rem;
+  
+}
+
+hr{
+  background-color: #dfc9c980;
+   width:             95%;
+ }
+
+ @media only screen and (min-width: 768px) {
+
+  .row {
+    display:          flex;    
+    margin-left:      1rem;
+    margin-right:     1rem;
+    text-align:       center;
+    align-items:      center;
+    justify-content:  center;
+  }
+
+  h2 {
+    text-align:       right;
+    color:          white;
+    padding:          .5rem;
+    font-size:        1rem;
+    margin-bottom:    0;
+  }
+
+  h5 {
+    text-align:       left;
+    color:          #3FC96D;
+    padding:          .5rem;
+    font-size:        1.3rem;
+    margin-bottom:    0;
+    
+  }
+
+  p {
+    font-size:        1rem;
+    color:          white;
+    padding:          .5rem;
+    text-align:       center;
+    margin-bottom:    0rem;
+    margin-left:      1rem;
+    margin-right:     1rem;
+  }
+
+ }
