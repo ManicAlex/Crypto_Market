@@ -1,15 +1,20 @@
-
+<div class="body">
 <div class="container">
-
+    <h1>Closest Bank Map</h1>
+    <hr>
+    <h3>Our Banks Map allows you to view all the banks in the area and also supports street view to provide easy navigation.</h3>
   
-  <agm-map [zoom]="16" [latitude]="data" [longitude]="data1">
+    <hr>
+  
+  <agm-map [zoom]="14" [latitude]="userLat" [longitude]="userLng">
     <agm-marker   *ngFor      ="let m of markers;"
-      [latitude]  ="m['latt']"
-      [longitude] ="m['lngg']">
+      [latitude]              ="m['latt']"
+      [longitude]             ="m['lngg']">
     </agm-marker>
   </agm-map>
 
 
 
+</div>
 </div>
 
