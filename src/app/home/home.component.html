@@ -1,15 +1,35 @@
-<div class="body">
-  <div class="middle">
-  <img class="coinImage" src="../../assets/img/coinHome.png">
-  
-  
-  <div class="container">
-      <h1>{{ 'HOME.TITLE' | translate }}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+</head>
+<body>
+  <div class="body">
 
-      <p>{{ 'HOME.TEXT' | translate }}</p>
+  <div class="home">
+    <div>
+        <img class="coinImage" src="../../assets/img/coinHome.png">
+    </div>
+    
+
+    <div>
+        <h1>{{ 'HOME.TITLE' | translate }}</h1>
+    </div>
+
+    <div>
+        <p>{{ 'HOME.TEXT' | translate }}</p>
+    </div>
+
+    <div>
+        <button class="coinsButton" routerLink="list-coins" ><h2>{{ 'HOME.BUTTON' | translate }}</h2></button>
+    </div>
+
   </div>
 
-  <button class="coinsButton" (click)="showSpinner()" routerLink="list-coins" ><h2>{{ 'HOME.BUTTON' | translate }}</h2></button>
-
 </div>
-</div>
+  
+</body>
+</html>
