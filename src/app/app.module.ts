@@ -1,23 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from '../app/app/app.component';
-import { LocationComponent } from './location/location.component';
-import { ListCoinsComponent } from './list-coins/list-coins.component';
-import { CoinComponent } from './coin/coin.component';
-import { NewsComponent } from './news/news.component';
-import { BanksComponent } from './banks/banks.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { AgmCoreModule } from '@agm/core';
-import { HomeComponent } from './home/home.component';
-import {HttpClient} from '@angular/common/http';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import { NgxSpinnerModule } from 'ngx-spinner';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule                   } from '@angular/platform-browser';
+import { NgModule                        } from '@angular/core';
+import { HttpClientModule                } from '@angular/common/http';
+import { AppRoutingModule                } from './app-routing.module';
+import { AppComponent                    } from '../app/app/app.component';
+import { LocationComponent               } from './location/location.component';
+import { ListCoinsComponent              } from './list-coins/list-coins.component';
+import { CoinComponent                   } from './coin/coin.component';
+import { BanksComponent                  } from './banks/banks.component';
+import { BrowserAnimationsModule         } from '@angular/platform-browser/animations';
+import { HeaderComponent                 } from './header/header.component';
+import { FooterComponent                 } from './footer/footer.component';
+import { AgmCoreModule                   } from '@agm/core';
+import { HomeComponent                   } from './home/home.component';
+import { HttpClient                      } from '@angular/common/http';
+import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import { TranslateHttpLoader             } from '@ngx-translate/http-loader';
+import { NgxSpinnerModule                } from 'ngx-spinner';
+import { FormsModule                     } from '@angular/forms';
+import { environment                     } from '../environments/environment';
+import { ServiceWorkerModule             } from '@angular/service-worker';
 
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -36,7 +37,6 @@ const translateModule = TranslateModule.forRoot({loader: {
     LocationComponent,
     ListCoinsComponent,
     CoinComponent,
-    NewsComponent,
     BanksComponent,
     HeaderComponent,
     FooterComponent,
@@ -53,7 +53,8 @@ const translateModule = TranslateModule.forRoot({loader: {
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDEFYZV7hfzWR8flJQ_xi_WJ0hh6vDaesk'
-    })
+    }),
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent
