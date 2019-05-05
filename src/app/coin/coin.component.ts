@@ -93,12 +93,15 @@ export class CoinComponent implements OnInit {
 
       });
 
+
+
 this.chart = new Chart('canvas', {
   type: 'line',
         
   data: {
           
   labels: allDates,
+
           
   datasets: [{ 
     data: allLows,
@@ -119,10 +122,11 @@ this.chart = new Chart('canvas', {
   },
   options:{
     responsive: true,
+    maintainAspectRatio: false,
     
   title:{
     display:    true,
-    fontSize:   17,
+    fontSize:   20,
     fontColor: 'white',
     text:      'Daily High & Low Prices'
   },
@@ -140,7 +144,7 @@ this.chart = new Chart('canvas', {
 
   labels:{
     fontColor: "white",
-    fontSize:   10
+    fontSize:   17
   }
   },
 
@@ -169,7 +173,10 @@ this.chart = new Chart('canvas', {
   }
   }
   });
+
+
   });
+  
   }
 }
 
