@@ -1,7 +1,7 @@
 # CryptoApp
 
 
-![alt text](https://imgur.com/R1D8FbU)
+![alt text](https://i.imgur.com/jsIW2Wj.png)
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
