@@ -1,29 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Location</title>
+</head>
+<body>
 
 <div class="body">
 
 <div class="container">
-  <h1>Find Your closest bank</h1>
+  <h1>Find Your Closest Bank</h1>
+  <hr>
+  <p>Running low on funds to buy crypto? Well, have no fear as our bank finder will ensure that you always have funds in your account available to top up your crypto wallet!</p>
 
-  <a id='getLocation'>Find My Location</a>
+  <hr>
 
+  <div class='row'>
 
-  <!-- Offer an alternative -->
-  <select [(ngModel)]="PickTown" (ngModelChange)="onChange($event)">
-    <option *ngFor="let town of towns" [ngValue]="town">
-      {{town.name}}
-    </option>
-  </select>
- 
-
-  <!-- Show some information about the location, when known -->
-  <div id='feedback'>Location is not yet known...</div>
-
-  <div *ngIf='lat'>
-      <a routerLink="/banks/{{lat}}/{{lng}}" id='getLocation'>Go to banks</a>
+  <div>
+       <button id='getLocation' class="locationButton"><h4>Find My Location</h4></button>
   </div>
+  
+  <div>
+        <select [(ngModel)]="PickTown" (ngModelChange)="onChange($event)">
+        <option *ngFor="let town of towns" [ngValue]="town">
+        {{town.name}}
+        </option>
+        </select>
+    </div>
+  </div>
+  
+  <!-- Show some information about the location, when known -->
+  <div id='feedback'><p>Location is not yet known...</p></div>
+  <hr>
+  <div class='row'>
+
+      <div>
+            <h5>Latitude:</h5>
+      </div>
+  
+      <div>
+            <h2>{{lat}}</h2>
+      </div>
+  </div>
+  
+  <div class='row'>
+      <div>
+            <h5>Longitude:</h5>
+      </div>
+  
+      <div>
+            <h2>{{lng}}</h2>
+      </div>
+  </div>
+    <hr>
+
+  <div class="mapsButtonDiv" *ngIf='lat'>
+      <button id='getLocation' class="mapsButton" routerLink="/banks/{{lat}}/{{lng}}" ><h2>View Nearest Banks</h2></button>
+  </div>
+
 
   <!-- Lazy JS load -->
   <script src='./location.component.ts'></script>
 </div>
 
 </div>
+</body>
+</html>
