@@ -1,18 +1,23 @@
 .table {
-    padding: 1rem;
-    margin-bottom: 0rem;
+    margin-bottom:      0rem;
+    padding:            1rem;
+    margin:             auto;
+    height:             90vh;
+    width:              90vw;
 }
 
 .container{
-    padding: none;
+    padding:            none;
 }
 
 .row {
-    display: flex;    
-    margin-left: .1rem;
-    margin-right: .1rem;
-    text-align: center;
-    justify-content: space-around;
+    display:            flex;    
+    margin-left:        .1rem;
+    margin-right:       .1rem;
+    margin-top:         .7rem;
+    text-align:         center;
+    align-items:        center;
+    justify-content:    center;
     
     
     
@@ -20,57 +25,119 @@
 
   .row>div {
  
-    flex: 1;
-    display: inline-block;
+    flex:               1;
+    display:            inline-block;
+
   }
 
   .row>div:nth-of-type(1) {
-    flex            : 1;
+    flex:               1;
+    width:              50%;
+    
+  }
+
+  .row>div:nth-of-type(2) {
+    flex            :   1;
+    width:              50%;
     
     
   }
 
-  .row>div:nth-of-type(1) {
-    flex            : 1;
-    
-    
-  }
 
   h4 {
-    font-size: 2rem;
-    color: #18F09E;
-    margin-bottom: 0rem;
+    font-size:          1.5rem;
+    color:            #3FC96D;
+    margin-bottom:      0rem;
+    padding:            .3rem;
   }
 
   h3 {
-    text-align: center;
-    color: white;
-    padding: .3rem;
-    font-size: 1rem;
+    text-align:         center;
+    color:            white;
+    padding:            .3rem;
+    font-size:          1.2rem;
+    margin-bottom:      0;
+  }
+
+  h2 {
+    text-align:         right;
+    color:            white;
+    padding:            .5rem;
+    font-size:          1.2rem;
+    margin-bottom:      0;
+  }
+
+  h5 {
+    text-align:         left;
+    color:            #3FC96D;
+    padding:            .5rem;
+    font-size:          1.3rem;
+    margin-bottom:      0;
     
   }
-  h5 {
-    text-align: center;
-    color: #18F09E;
-    padding: .3rem;
-    font-size: 1.2rem;
+
+  h1 {
+    text-align:         center;
+    color:            #3FC96D;
+    padding:            .3rem;
+    font-size:          1.3rem;
+    margin-bottom:      0;
     
   }
 
   .coinImage{
-    height: 4.5rem;
-    width: 4.5rem;
- 
-
+    height:             5rem;
+    width:              5rem;
     
+}
+
+p {
+  text-align:           center;
+  color:              white;
+  padding:              .3rem;
+  font-size:            1.4rem;
+  margin-bottom:        0;
 }
 
 .coinImageDiv{
-    display:block;
-    text-align: center;
+    display:            block;
+    text-align:         center;
     
 }
+
  hr{
-  background-color: #dfc9c980;
-   width: 90%;
+  background-color:   #dfc9c980;
+   width:               95%;
  }
+
+
+ @media only screen and (min-width: 768px) {
+
+  h2 {
+    text-align:          right;
+    color:             white;
+    padding:             .5rem;
+    font-size:           1.2rem;
+    margin-bottom:       0;
+    margin-right:        15rem;
+  }
+
+  h5 {
+    text-align:          left;
+    color:             #3FC96D;
+    padding:             .5rem;
+    font-size:           1.3rem;
+    margin-bottom:       0;
+    margin-left:         15rem;
+    
+  }
+
+  .table {
+    margin-bottom:       0rem;
+    padding:             3rem;
+    margin:              auto;
+    height:              90vh;
+    width:               90vw;
+}
+ 
+}
