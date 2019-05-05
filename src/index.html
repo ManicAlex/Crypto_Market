@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Cypto Market</title>
+  <title>crpto-app</title>
   <base href="/">
 
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="./favicon.png">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#1976d2">
+
+
+   <!-- Use Google's PWACompat script to add support for Safari
+      (and, technically, other browsers) -->
+   <script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.6/pwacompat.min.js" integrity="sha384-GOaSLecPIMCJksN83HLuYf9FToOiQ2Df0+0ntv7ey8zjUHESXhthwvq9hXAZTifA" crossorigin="anonymous"></script>
+ 
+   <!-- Or (older), manually set compatibility meta tags for iOS -->
+   <meta name='apple-mobile-web-app-capable' content='yes'>
+   <meta name='apple-mobile-web-app-title' content='crpto-app'>
+   <meta name='apple-mobile-web-app-status-bar-style' content='#fff'>
+   <link rel='apple-touch-icon' href='./favicon.png'>
+
 </head>
 <body>
   <app-root></app-root>
