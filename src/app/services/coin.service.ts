@@ -31,7 +31,7 @@ export class CoinService {
 
     showAllCoins(codesign){
       return this.http.
-      get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign + '&&to_currency=EUR&apikey=' + this.api3 + '');
+      get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign + '&&to_currency=EUR&apikey=' + this.api10 + '');
     }
 
     //Apikey only allows for 5 api calls per min and i have more
@@ -54,7 +54,7 @@ export class CoinService {
 
     GetCoinStock(codesign4){
       return this.http.
-      get('https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=' + codesign4 + '&market=EUR&apikey=' + this.api7 + '')
+      get('https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=' + codesign4 + '&market=EUR&apikey=' + this.api2 + '')
       ;
     }
 
