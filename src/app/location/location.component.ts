@@ -57,9 +57,7 @@ function getPositionSuccess(position) {
   
 
   feedbackDiv.innerHTML = `
-    <h3><strong>Latitude:</strong> ${this.lat}<br>
-    <strong>Longitude:</strong> ${this.lng}<br>
-    <strong>Accuracy:</strong> ${accuracy} Metres</h3>`;
+    `;
   }
 
 
@@ -73,7 +71,7 @@ getLocationLink
 
     feedbackDiv.innerHTML = 'Looking...';
 
-    // Single-shot, get location data
+    
     navigator
       .geolocation
       .getCurrentPosition(
@@ -90,7 +88,7 @@ getLocationLink
   towns =[ 
           {'name':'NONE', 'lat': '0', 'lng': '0'},
           {'name':'Dundalk', 'lat': '54.005318', 'lng': '-6.402506'},
-          {'name':'Dublin', 'lat': '53.3492935', 'lng': '-6.2610914'},
+          {'name':'Dublin', 'lat': '53.345553', 'lng': '-6.266095'},
           {'name':'Drogheda', 'lat': '54.0053249', 'lng': '-6.4023248'},
           {'name':'Cavan', 'lat': '53.990958', 'lng': '-7.360217'},
         ];
