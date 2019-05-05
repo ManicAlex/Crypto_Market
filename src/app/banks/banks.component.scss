@@ -1,9 +1,33 @@
 .container {
-    background-color: #dfc9c980;
-    width: 90%;
+    width:              95%;
+    position:           absolute;
+    transform:          translate(-50%, -50%);
+    left:               50%;
+    top:                50%;
+    padding:            1rem;
 }
 
-
 agm-map {
-    height: 300px;
+    height:             300px;
   }
+
+  h1 {
+    font-size:          1.7rem;
+    color:             #3FC96D;
+    padding:            .5rem;
+    margin-bottom:      0rem;
+    text-align:         center;
+  }
+
+h3 {
+    font-size:          1rem;
+    color:             white;
+    padding:            .5rem;
+    text-align:         center;
+    margin-bottom:      0rem;
+  }
+
+  hr{
+    background-color:  #dfc9c980;
+     width:             95%;
+   }
