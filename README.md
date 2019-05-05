@@ -20,7 +20,7 @@ In order to get the markers on the angular maps to work, a cors proxy is require
 
 *Do a get clone of the repositories for this Crypto Market and cors proxy project in separate folders in your htdocs
 
-*npm install
+*`npm install`
 
 
 *Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
