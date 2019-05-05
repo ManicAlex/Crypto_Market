@@ -31,13 +31,13 @@ export class CoinService {
 
     showAllCoins(codesign){
       return this.http.
-      get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign + '&&to_currency=EUR&apikey=' + this.api5 + '');
+      get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign + '&&to_currency=EUR&apikey=' + this.api3 + '');
     }
 
     //Apikey only allows for 5 api calls per min and i have more
     showAllCoins1(codesign1){
       return this.http.
-      get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign1 + '&&to_currency=EUR&apikey=' + this.api + '');
+      get('https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=' + codesign1 + '&&to_currency=EUR&apikey=' + this.api6 + '');
     }
 
     showAllCoins2(codesign2){
@@ -54,48 +54,8 @@ export class CoinService {
 
     GetCoinStock(codesign4){
       return this.http.
-      get('https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=' + codesign4 + '&market=EUR&apikey=' + this.api10 + '')
+      get('https://www.alphavantage.co/query?function=DIGITAL_CURRENCY_DAILY&symbol=' + codesign4 + '&market=EUR&apikey=' + this.api7 + '')
       ;
     }
 
-   
-  // showbitCash() {
-  //   return this.http.get(
-  //     `${this.url}&from_currency=BCH&&to_currency=EUR&apikey=PXP1YAA08GRJ6YY1`
-    
-  //      );
-  
-  //   }
-  
-  // showLitecoin() {
-  //    return this.http.get(
-  //     `${this.url}&from_currency=LTC&&to_currency=EUR&apikey=PXP1YAA08GRJ6YY1`
-      
-  //     );
-    
-  //   }
-
-  // showEthereum() {
-  //    return this.http.get(
-  //     `${this.url}&from_currency=ETH&&to_currency=EUR&apikey=PXP1YAA08GRJ6YY1`
-        
-  //      );
-      
-  //    }
-
-  // showRipple() {
-  //    return this.http.get(
-  //     `${this.url}&from_currency=XRP&&to_currency=EUR&apikey=PXP1YAA08GRJ6YY1`
-            
-  //      );
-          
-  //    }
-
-  // showMonero() {
-  //   return this.http.get(
-  //     `${this.url}&from_currency=XMR&&to_currency=EUR&apikey=PXP1YAA08GRJ6YY1`
-              
-  //      );
-            
-    //  }
 }
