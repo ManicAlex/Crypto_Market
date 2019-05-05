@@ -1,4 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Coin List</title>
+</head>
+<body>
 <div class="body">
 
 <div *ngIf="coinsBTC && ['Realtime Currency Exchange Rate']"> 
@@ -17,7 +25,7 @@
         </div>
 
         <div>
-         <h4>{{coinsBTC['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+         <h3>{{coinsBTC['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h3>
         </div>
 
       </div>
@@ -42,7 +50,7 @@
       </div>
 
       <div>
-       <h4>{{coinsLTC['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+       <h3>{{coinsLTC['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h3>
       </div>
 
     </div>
@@ -67,7 +75,7 @@
       </div>
 
       <div>
-       <h4>{{coinsDASH['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+       <h3>{{coinsDASH['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h3>
       </div>
 
     </div>
@@ -92,40 +100,16 @@
       </div>
 
       <div>
-       <h4>{{coinsETH['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+       <h3>{{coinsETH['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h3>
       </div>
 
     </div>
   </div>
 </div>
 
-
-
-<div *ngIf="coinsXRP && ['Realtime Currency Exchange Rate']"> 
-  <div class='container'  routerLink="/coin/{{coinsXRP['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
-    <div class="row">
-      <div>
-            <img class="coinImage" src="../../assets/img/XRP.png">
-      </div>
-
-      <div>
-        <h4>{{coinsXRP['Realtime Currency Exchange Rate']['2. From_Currency Name']}}</h4>
-      </div>
-  
-      <div>
-        <h4>{{coinsXRP['Realtime Currency Exchange Rate']['1. From_Currency Code']}}</h4>
-      </div>
-
-      <div>
-       <h4>{{coinsXRP['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
-      </div>
-
-    </div>
-  </div>
-</div>
     
 
-<!-- <div *ngIf="coinsXMR && ['Realtime Currency Exchange Rate']"> 
+<div *ngIf="coinsXMR && ['Realtime Currency Exchange Rate']"> 
   <div class='container'  routerLink="/coin/{{coinsXMR['Realtime Currency Exchange Rate']['1. From_Currency Code']}}">
     <div class="row">
       <div>
@@ -141,15 +125,13 @@
       </div>
 
       <div>
-       <h4>{{coinsXMR['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h4>
+       <h3>{{coinsXMR['Realtime Currency Exchange Rate']['5. Exchange Rate'] | currency:'EUR':'symbol-narrow':'0.2-2'}}</h3>
       </div>
 
     </div>
   </div>
-</div> -->
-                          
 </div>
                           
-
-      
-    
+</div>
+</body>
+</html>
