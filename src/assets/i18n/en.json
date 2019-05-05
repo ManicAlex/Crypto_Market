@@ -6,9 +6,9 @@
     },
     "COIN": {
         "CAP": "The Current Market Cap",
-        "VOLUME": "Last Volume price",
-        "OPEN": "Last Opening price",
-        "CLOSE": "Last Closing price"
+        "VOLUME": "Volume price",
+        "OPEN": "Opening price",
+        "CLOSE": "Closing price"
       }
 
   }
