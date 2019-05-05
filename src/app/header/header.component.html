@@ -1,10 +1,22 @@
 <div class="header">
 <div class="titlewrap">
-<H1>
-    <img class="coinImage" routerLink="home" src="../../assets/img/LOGO.png">
-    <img class="translate" (click)="useLanguage('en')" src="../../assets/img/english.png">
-    <img class="translate" (click)="useLanguage('fr')" src="../../assets/img/french.png">
-</H1>
+<div>
+    <img class="backArrow" (click)="backClicked()" src="../../assets/img/backArrow.png">
+</div>
+<div>
+    <img class="Logo" routerLink="home" src="../../assets/img/logo.png">
+</div> 
+
+<div>
+<label for='langSelect'></label>
+<select #langSelect (change)='translate.use(langSelect.value)'>
+  <option
+    *ngFor        =     "let lang of translate.getLangs()"
+    [value]       =     'lang'
+    [selected]    =     'lang === translate.currentLang'
+  >{{lang}}</option>
+</select>
+</div>
 </div>
 </div>
 
